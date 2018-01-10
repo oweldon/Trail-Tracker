@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">ORION!</a>
+      <a class="navbar-brand" href="/profile">Find A New Adventure</a>
     </div>
 
     <!-- Define the links -->
@@ -23,7 +23,15 @@
         </li>
         <% } else { %>
         <li>
-          <a href="/auth/logout">Log Out...I'll miss you</a>
+          <a href="/trails/wishlist">Wishlist</a>
+        </li>
+        <li>
+          <a href="/trails/completed">Completed Hikes</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a id="logout" href="/auth/logout">Log Out...Have fun outside!</a>
         </li>
         <% } %>
       </ul>

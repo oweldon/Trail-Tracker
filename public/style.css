@@ -1,0 +1,18 @@
+body {
+  background-color: forestGreen;
+}
+#allHikes {
+  height: 500px;
+  width: 500px;
+  background-color: white;
+  overflow: scroll;
+}
+#map {
+  height: 500px;
+  width: 500px;
+  float: right;
+}
+#logout {
+  background-color: red;
+  color: white;
+}

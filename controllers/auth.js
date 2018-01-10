@@ -63,7 +63,7 @@ router.get('/callback/facebook', passport. authenticate('facebook', {
   successRedirect: '/profile',
   successFlash: 'You Successfully Logged In Via Facebook',
   failureRedirect: '/auth/login',
-  failureFlash: "You tried to login with FB, but it doesn't like you"
+  failureFlash: "Something Went Wrong, Try Again"
 }));
 
 module.exports = router;

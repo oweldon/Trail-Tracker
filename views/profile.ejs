@@ -3,3 +3,15 @@
 <div>
   <h3>Welcome back, <%= currentUser.username %></h3>
 </div>
+
+<div id="map"></div>
+<div id="allHikes">
+
+
+</div>
+
+
+<script src="/script.js"></script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=<%= process.env.MAP_KEY %>&callback=initMap">
+</script>

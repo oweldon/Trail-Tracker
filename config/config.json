@@ -1,6 +1,6 @@
 {
   "development": {
-    "database": "auth-boilerplate",
+    "database": "trail_tracker",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "operatorsAliases": "false"
