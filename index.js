@@ -40,7 +40,7 @@ app.get('/profile', isLoggedIn, function(req, res){
 app.post('/coords', function(req, res){
   //res.send(req.body);
   console.log(req.body);
-  var hikeUrl = "https://trailapi-trailapi.p.mashape.com/?lat="+req.body.lat+"&limit=25&lon="+req.body.lng+"&q[activities_activity_type_name_eq]=hiking&radius=10";
+  var hikeUrl = "https://trailapi-trailapi.p.mashape.com/?lat="+req.body.lat+"&limit=25&lon="+req.body.lng+"&q[activities_activity_type_name_eq]=hiking&caving&radius=10";
   hikeUrl += "&";
 
   request({
@@ -55,7 +55,6 @@ app.post('/coords', function(req, res){
     res.send(hikes);
   });
 });
-
 
 
 app.use('/auth', require('./controllers/auth'));
