@@ -1,2 +1,16 @@
 <h1>Hikes I'm Gonna Do</h1>
-<h3>Gonna hike all over those trail's faces</h3>
+<h2>Gonna hike all over those trail's faces</h2>
+<div class="showTrails">
+  <% user.trails.forEach(function(trails) { %>
+  <div class="singleTrail">
+    <h2><%= trails.name %>:</h2>
+    <h3><%= trails.city %>, <%= trails.state %></h3>
+    <p><%= trails.description %></p>
+    <h3>Directions:</h3>
+    <p><%= trails.directions %></p>
+    <a href="/trails/<%= trails.id %>" id="delete" class="delete-trail, btn btn-danger">
+      Did It! Remove From Whish list
+    </a>
+  </div>
+    <% }); %>
+</div>
