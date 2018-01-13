@@ -1,5 +1,3 @@
-console.log("Sanity check!");
-
 var marker;
 var map;
 function placeMarker(location) {
@@ -68,6 +66,7 @@ function getCoords(location){
                   trailDirections.setAttribute('value', place.directions);
                   var addWish = document.createElement("input"); //input element, Submit button
                   addWish.style.height = "40px";
+                  addWish.style.color = "green";
                   addWish.setAttribute('type',"submit");
                   addWish.setAttribute('value',"Add To Wishlist");
 

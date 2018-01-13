@@ -29,6 +29,8 @@ p {
 #allHikes {
   height: 500px;
   width: 500px;
+  color: white;
+  background-color: rgba(0,0,0,.7);
   border: 5px solid white;
   overflow: scroll;
 }
