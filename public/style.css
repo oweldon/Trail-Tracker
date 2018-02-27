@@ -2,6 +2,7 @@ body {
   font-family: 'Special Elite', cursive;
   text-align: center;
   background-image: url("http://www.wallpapers13.com/wp-content/uploads/2015/12/Winter-scene-wallpaper-for-1920x1080-hdtv-1080p-57832-1440x900.jpg");
+  background-repeat: repeat;
 }
 p {
   font-size: 24px;
@@ -27,16 +28,16 @@ p {
   margin-bottom: 20px;
 }
 #allHikes {
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  /* width: 500px; */
   color: white;
   background-color: rgba(0,0,0,.7);
   border: 5px solid white;
   overflow: scroll;
 }
 #map {
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   float: right;
   border: 5px solid white;
 }

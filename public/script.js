@@ -11,13 +11,14 @@ function placeMarker(location) {
             map: map,
             draggable: true
     });
-      getCoords(location);
+      map.addListener('click', getCoords(location));
   }
 }
 var initMap = function() {
     map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 48.090839, lng: -121.970406},
-    zoom: 9
+    zoom: 9,
+    draggable: true
   });
   google.maps.event.addListener(map, 'click', function(event) {
    placeMarker(event.latLng);
