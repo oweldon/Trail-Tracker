@@ -35,7 +35,6 @@ router.post('/', function(req, res){
        where: {id: req.user.id},
        include: [db.trail]
      }).then(function(user){
-       console.log("GIIIIIIIIIIt");
        res.render("trails/wishlist", {user: user});
        console.log(user);
      }).catch(function(err){

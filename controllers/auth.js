@@ -52,18 +52,4 @@ router.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-/* OATH ROUTES */
-//calls the passport-facebook strategy (located in passport config)
-router.get('/facebook', passport.authenticate('facebook', {
-  scope: ['public_profile', 'email']
-}));
-
-//handle the response from Facebook (logic located in passport config)
-router.get('/callback/facebook', passport. authenticate('facebook', {
-  successRedirect: '/profile',
-  successFlash: 'You Successfully Logged In Via Facebook',
-  failureRedirect: '/auth/login',
-  failureFlash: "Something Went Wrong, Try Again"
-}));
-
 module.exports = router;
