@@ -11,8 +11,8 @@ function placeMarker(location) {
             map: map,
             draggable: true
     });
-      map.addListener('click', getCoords(location));
   }
+  map.addListener('click', getCoords(location));
 }
 var initMap = function() {
     map = new google.maps.Map(document.getElementById('map'), {
