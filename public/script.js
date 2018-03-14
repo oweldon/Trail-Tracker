@@ -43,9 +43,6 @@ function getCoords(location){
             url: "/coords",
             data: { lat: location.lat, lng: location.lng },
             success: function(data) {
-                //show content
-                console.log('Success!');
-                console.log('data', data);
                 // append a div to a results area for each hike
                 data.places.forEach(function(place){
                   //Display the text
