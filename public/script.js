@@ -4,6 +4,7 @@ function placeMarker(location) {
     if (marker) {
         //if marker already was created change positon
         marker.setPosition(location);
+        refresh();
     } else {
         //create a marker
         marker = new google.maps.Marker({
@@ -14,6 +15,16 @@ function placeMarker(location) {
   }
   map.addListener('click', getCoords(location));
 }
+
+function refresh(){
+  if(marker){
+    var element = document.getElementById("allHikes");
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+  }
+}
+
 var initMap = function() {
     map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 48.090839, lng: -121.970406},
@@ -25,6 +36,7 @@ var initMap = function() {
 
 });
 }
+
 function getCoords(location){
         $.ajax({
             type: "POST",
