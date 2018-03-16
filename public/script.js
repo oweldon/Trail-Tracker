@@ -2,9 +2,9 @@ var marker;
 var map;
 function placeMarker(location) {
     if (marker) {
-      refresh();
         //if marker already was created change positon
         marker.setPosition(location);
+        refresh();
     } else {
         //create a marker
         marker = new google.maps.Marker({
