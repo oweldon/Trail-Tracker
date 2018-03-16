@@ -2,7 +2,6 @@ var marker;
 var map;
 function placeMarker(location) {
     if (marker) {
-      refresh();
         //if marker already was created change positon
         marker.setPosition(location);
     } else {
@@ -14,15 +13,6 @@ function placeMarker(location) {
     });
   }
   map.addListener('click', getCoords(location));
-}
-
-function refresh(){
-  if(marker){
-    var element = document.getElementById("allHikes");
-    while (element.firstChild) {
-      element.removeChild(element.firstChild);
-    }
-  }
 }
 
 var initMap = function() {
