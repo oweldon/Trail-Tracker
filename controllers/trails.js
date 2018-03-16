@@ -24,6 +24,7 @@ router.post('/', function(req, res){
       },
     }).spread(function(trail, wasCreated){
       res.redirect('/trails/wishlist');
+      console.log('added to wish list')
     }).catch(function(err){
       console.log('error happened', err);
       res.send('error happened, see terminal');
